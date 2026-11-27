@@ -12,6 +12,39 @@ Released 2026-11-27 for Windows 10 / 11 x64.
 Also attached: `SHA256SUMS.txt`, `settings.example.json` and
 `book_modes.example.json`.
 
+## Highlights / 功能亮点
+
+- Read-only local scan of KRDS sidecars, covers, ebook metadata and
+  `fmcache.db`; no Amazon login or cloud statistics.
+- Offline HTML dashboard with search, sorting, column controls, print, XLSX
+  export and in-browser share-image export.
+- Period reports, annual report, 12-week heatmap, history snapshots, streaks
+  and four-star achievement tracks.
+- Shelf views for books and manga, configurable themes, cover backgrounds,
+  shelf styles and visible report sections.
+- Text + Manga edition adds source-file page counts, pages read, progress and
+  KFX position mapping.
+- Optional OCR remains explicitly labelled as an estimate and never replaces
+  Kindle values or exact text-derived word counts.
+
+中文摘要：本版本支持 Kindle 只读扫描、本地 HTML 看板、CSV/XLSX、搜索筛选、
+分页书架、外观设置、周期/年度报告、趋势热力图、历史快照、连续阅读和成就系统。
+漫画版额外提供源文件页数、已读页数、进度与 KFX 位置映射；OCR 始终作为可选估算值。
+
+## Screenshots / 效果展示
+
+The screenshots below are rebuilt from the repository's five-book synthetic
+fixture. The originals of personal dashboards are not published.
+以下截图均由仓库中的五册合成夹具重新生成，不会公开真实书名、用户名或阅读记录。
+
+| Overview / 总览 | Period report / 周期报告 |
+| --- | --- |
+| <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-overview.webp" alt="Dashboard overview"> | <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-period.webp" alt="Period reports"> |
+| **Trends / 趋势** | **Table and export / 表格与导出** |
+| <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-trends.webp" alt="Dashboard trends"> | <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-table.webp" alt="Dashboard table"> |
+| **Appearance / 外观** | **English dark mode / 英文深色模式** |
+| <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-appearance.webp" alt="Dashboard appearance settings"> | <img src="https://raw.githubusercontent.com/josefawilson76-design/kindle-reading-stats/main/docs/assets/demo-english-dark.webp" alt="English dark dashboard"> |
+
 ## 中文说明
 
 本版本提供两个 Windows 单文件程序：
@@ -50,6 +83,29 @@ text-derived counts.
 Verify every download against `SHA256SUMS.txt`. The executables are not
 commercially code-signed, so Windows SmartScreen may show an unknown publisher
 warning.
+
+## Optional OCR dependencies / 可选 OCR 依赖
+
+These components are not bundled with either executable. Install them from the
+upstream or documented Windows distribution pages below.
+
+| Component | Purpose | Download / documentation |
+| --- | --- | --- |
+| Calibre | KFX conversion, metadata and KFX position support | [Official Windows download](https://calibre-ebook.com/download_windows64) |
+| Poppler | `pdfinfo` page counts and `pdftoppm` rendering | [Windows builds](https://github.com/oschwartz10612/poppler-windows/releases) |
+| PaddleOCR | Chinese, English and Japanese OCR | [PaddleOCR releases](https://github.com/PaddlePaddle/PaddleOCR/releases) |
+| PaddlePaddle | PaddleOCR runtime | [PaddlePaddle installation](https://www.paddlepaddle.org.cn/install/quick) |
+| manga-ocr | Preferred Japanese manga OCR | [Source](https://github.com/kha-white/manga-ocr) · [Offline model](https://huggingface.co/kha-white/manga-ocr-base) |
+| Tesseract | Optional English OCR backend | [Windows builds](https://github.com/UB-Mannheim/tesseract/wiki) · [Language data](https://github.com/tesseract-ocr/tessdata) |
+
+PaddleOCR requires separate detection, classification and recognition model
+files. The exact environment variables and model-directory guidance are in the
+[Chinese README](https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.md#漫画版依赖)
+and [English README](https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.en.md#requirements).
+
+PaddleOCR 需要另外准备检测、分类和识别模型文件。具体环境变量和模型目录说明见
+[中文 README](https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.md#漫画版依赖)
+和 [English README](https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.en.md#requirements)。
 
 ## Checksums
 

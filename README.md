@@ -101,11 +101,18 @@ Get-FileHash .\KindleReader-OCR-v1.13.0.exe -Algorithm SHA256
 漫画分类的显式映射和部分轻量判断不要求 OCR。以下组件仅在对应功能实际启用时
 使用，**不会随 exe 一起分发**：
 
-- **Calibre**：KFX 正文转换、元数据和 KFX 位置映射的本地支持。
-- **Poppler**：`pdfinfo` 读取页数，`pdftoppm` 渲染页面。
-- **PaddleOCR + PaddlePaddle**：中文/英文，以及可选的日文 OCR。
-- **manga-ocr**：日文漫画 OCR 优先方案，通常还需要 PyTorch 与 Transformers。
-- **Tesseract + `eng` 训练数据**：可选的英文 OCR 后端。
+- **[Calibre](https://calibre-ebook.com/download_windows64)**：KFX 正文转换、元数据和
+  KFX 位置映射的本地支持。
+- **[Poppler Windows builds](https://github.com/oschwartz10612/poppler-windows/releases)**：
+  `pdfinfo` 读取页数，`pdftoppm` 渲染页面。
+- **[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR/releases)** +
+  **[PaddlePaddle](https://www.paddlepaddle.org.cn/install/quick)**：中文/英文，以及
+  可选的日文 OCR。
+- **[manga-ocr](https://github.com/kha-white/manga-ocr)**：日文漫画 OCR 优先方案；
+  离线模型可从
+  **[manga-ocr-base](https://huggingface.co/kha-white/manga-ocr-base)** 获取。
+- **[Tesseract Windows builds](https://github.com/UB-Mannheim/tesseract/wiki)** +
+  **[tessdata](https://github.com/tesseract-ocr/tessdata)**：可选的英文 OCR 后端。
 
 OCR 模型和大型运行时需要用户自行安装和准备。程序不会自动联网安装依赖、下载模型
 或绕过 DRM。可通过以下环境变量指向明确的本地可执行文件：

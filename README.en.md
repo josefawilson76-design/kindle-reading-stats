@@ -102,11 +102,19 @@ The text-only executable needs no Python installation.
 
 Optional text and manga conversion can use:
 
-- **Calibre** for KFX conversion, metadata and local KFX position support.
-- **Poppler** (`pdfinfo`, `pdftoppm`) for PDF page counts and rendering.
-- **PaddleOCR + PaddlePaddle** for Chinese, English and optional Japanese OCR.
-- **manga-ocr**, usually with PyTorch and Transformers, for Japanese manga OCR.
-- **Tesseract** with `eng.traineddata` as an optional English OCR backend.
+- **[Calibre](https://calibre-ebook.com/download_windows64)** for KFX conversion,
+  metadata and local KFX position support.
+- **[Poppler Windows builds](https://github.com/oschwartz10612/poppler-windows/releases)**
+  (`pdfinfo`, `pdftoppm`) for PDF page counts and rendering.
+- **[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR/releases)** +
+  **[PaddlePaddle](https://www.paddlepaddle.org.cn/install/quick)** for Chinese,
+  English and optional Japanese OCR.
+- **[manga-ocr](https://github.com/kha-white/manga-ocr)** for Japanese manga OCR.
+  The offline base model is available from
+  **[manga-ocr-base](https://huggingface.co/kha-white/manga-ocr-base)**.
+- **[Tesseract Windows builds](https://github.com/UB-Mannheim/tesseract/wiki)** with
+  **[tessdata](https://github.com/tesseract-ocr/tessdata)** as an optional
+  English OCR backend.
 
 These tools and OCR model files are not bundled. The app does not download
 models, install dependencies, use network services or bypass DRM. You can point
