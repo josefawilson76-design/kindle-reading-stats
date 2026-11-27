@@ -7409,7 +7409,7 @@ class UpdatedDashboardContractTests(unittest.TestCase):
         self.assertIn('data-shelf-default-mode="book"', document)
         instrumentation = """
 <script>
-  window.addEventListener("load", () => {
+  window.addEventListener("load", async () => {
     const root = document.documentElement;
     const title = document.querySelector(".shelf-title-copy h2");
     const heading = document.querySelector(".library-heading");
@@ -7470,6 +7470,9 @@ class UpdatedDashboardContractTests(unittest.TestCase):
     shelfTitleStyleSelect.value = "c";
     shelfTitleStyleSelect.dispatchEvent(new Event("change"));
     void shelfModeSwitch.offsetWidth;
+    await new Promise(resolve => {
+      requestAnimationFrame(() => requestAnimationFrame(resolve));
+    });
     root.dataset.testStyleC = [
       root.dataset.shelfTitleStyle,
       getComputedStyle(shelfModeSwitch).borderBottomStyle,
