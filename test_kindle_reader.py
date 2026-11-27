@@ -7455,6 +7455,7 @@ class UpdatedDashboardContractTests(unittest.TestCase):
 
     shelfTitleStyleSelect.value = "b";
     shelfTitleStyleSelect.dispatchEvent(new Event("change"));
+    void shelfModeSwitch.offsetWidth;
     root.dataset.testStyleB = [
       root.dataset.shelfTitleStyle,
       getComputedStyle(
@@ -7468,6 +7469,7 @@ class UpdatedDashboardContractTests(unittest.TestCase):
 
     shelfTitleStyleSelect.value = "c";
     shelfTitleStyleSelect.dispatchEvent(new Event("change"));
+    void shelfModeSwitch.offsetWidth;
     root.dataset.testStyleC = [
       root.dataset.shelfTitleStyle,
       getComputedStyle(shelfModeSwitch).borderBottomStyle,
