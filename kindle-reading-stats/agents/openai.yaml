@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kindle 阅读统计"
+  short_description: "从 USB Kindle 的 KRDS 文件提取阅读时长、WPM 与进度，并导出 CSV/JSON/HTML。"
+  default_prompt: "使用 $kindle-reading-stats 从已连接的 Kindle 提取阅读统计并生成表格。"

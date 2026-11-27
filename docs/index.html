@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN" data-ui-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kindle Reading Dashboard v1.13.0: local, read-only Kindle reading statistics for Windows.">
+  <meta property="og:title" content="Kindle Reading Dashboard v1.13.0">
+  <meta property="og:description" content="Read-only Kindle reading statistics, local dashboards and optional manga reports for Windows.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/dashboard-preview.png">
+  <title>Kindle Reading Dashboard v1.13.0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#downloads">
+    <span class="lang-zh">跳到下载</span>
+    <span class="lang-en">Skip to downloads</span>
+  </a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kindle Reading Dashboard">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+          <path d="M8 7h8M8 11h6"/>
+        </svg>
+      </span>
+      <span>Kindle Reading Dashboard</span>
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#features"><span class="lang-zh">功能</span><span class="lang-en">Features</span></a>
+      <a href="#install"><span class="lang-zh">安装</span><span class="lang-en">Install</span></a>
+      <a href="#privacy"><span class="lang-zh">隐私</span><span class="lang-en">Privacy</span></a>
+      <a href="https://github.com/josefawilson76-design/kindle-reading-stats/releases">Releases</a>
+    </nav>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="eyebrow">
+          <span class="version-dot" aria-hidden="true"></span>
+          <span class="lang-zh">Windows 10 / 11 · v1.13.0 · 2026-11-27</span>
+          <span class="lang-en">Windows 10 / 11 · v1.13.0 · 2026-11-27</span>
+        </div>
+        <h1 id="hero-title">Kindle Reading Dashboard</h1>
+        <p class="hero-copy lang-zh">
+          从 USB 连接的 Kindle 只读生成本地阅读看板。文字书与漫画统计各有独立版本，
+          数据留在你的电脑上。
+        </p>
+        <p class="hero-copy lang-en">
+          Build a local reading dashboard from a USB-connected Kindle without
+          writing to the device. Separate editions for text books and manga keep
+          your reading data on your computer.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#downloads">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <path d="m7 10 5 5 5-5M12 15V3"/>
+            </svg>
+            <span class="lang-zh">选择版本</span><span class="lang-en">Choose an edition</span>
+          </a>
+          <a class="button button-secondary" href="https://github.com/josefawilson76-design/kindle-reading-stats">
+            <span class="lang-zh">查看源码</span><span class="lang-en">View source</span>
+          </a>
+        </div>
+        <dl class="hero-facts" aria-label="Release facts">
+          <div>
+            <dt class="lang-zh">两版选择</dt><dt class="lang-en">Two editions</dt>
+            <dd class="lang-zh">文字书 / 文字 + 漫画</dd>
+            <dd class="lang-en">Text / Text + Manga</dd>
+          </div>
+          <div>
+            <dt class="lang-zh">数据位置</dt><dt class="lang-en">Data location</dt>
+            <dd class="lang-zh">仅本机输出目录</dd><dd class="lang-en">Local output only</dd>
+          </div>
+          <div>
+            <dt class="lang-zh">设备原则</dt><dt class="lang-en">Device policy</dt>
+            <dd class="lang-zh">Kindle 全程只读</dd><dd class="lang-en">Kindle remains read-only</dd>
+          </div>
+        </dl>
+      </div>
+      <figure class="product-shot">
+        <div class="shot-toolbar" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <b>kindle_reading_dashboard.html</b>
+        </div>
+        <img src="assets/dashboard-preview.png" alt="Synthetic Kindle Reading Dashboard preview" width="1440" height="1040">
+        <figcaption>
+          <span class="lang-zh">使用全合成五册数据生成的看板预览，不包含真实阅读记录。</span>
+          <span class="lang-en">Dashboard preview generated from the five-book synthetic fixture. No real reading data is shown.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section downloads" id="downloads" aria-labelledby="download-title">
+      <div class="section-heading">
+        <p class="kicker">RELEASE ASSETS</p>
+        <h2 id="download-title"><span class="lang-zh">选择合适版本</span><span class="lang-en">Choose the right edition</span></h2>
+        <p class="lang-zh">两个程序共享统计核心。纯文字版不支持漫画，也不会加载 OCR 模块。</p>
+        <p class="lang-en">Both editions share the reporting core. The text-only build has no manga or OCR module.</p>
+      </div>
+
+      <div class="download-grid">
+        <article class="download-card">
+          <div class="card-topline">
+            <span class="edition-label">TEXT</span>
+            <span class="file-kind">.EXE</span>
+          </div>
+          <h3><span class="lang-zh">纯文字版</span><span class="lang-en">Text-only</span></h3>
+          <p class="lang-zh">适合文字书阅读统计。看板、历史、成就和本地封面，不加载漫画分类或 OCR。</p>
+          <p class="lang-en">For text-book reading history. Dashboard, trends, achievements and local covers, without manga classification or OCR.</p>
+          <div class="asset-meta">
+            <span>KindleReader-Text-v1.13.0.exe</span>
+            <span data-release-size="text">—</span>
+          </div>
+          <div class="hash-row">
+            <span>SHA-256</span>
+            <code data-release-sha="text">Loading checksum…</code>
+            <button type="button" class="copy-button" data-copy-sha="text" title="Copy SHA-256">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="14" height="14" x="8" y="8" rx="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <span class="sr-only">Copy SHA-256</span>
+            </button>
+          </div>
+          <a class="button button-download" data-download="text" href="https://github.com/josefawilson76-design/kindle-reading-stats/releases/download/v1.13.0/KindleReader-Text-v1.13.0.exe">
+            <span class="lang-zh">下载纯文字版</span><span class="lang-en">Download text-only</span>
+          </a>
+        </article>
+
+        <article class="download-card feature-card">
+          <div class="card-topline">
+            <span class="edition-label">TEXT + MANGA</span>
+            <span class="file-kind">.EXE</span>
+          </div>
+          <h3><span class="lang-zh">文字 + 漫画版</span><span class="lang-en">Text + Manga</span></h3>
+          <p class="lang-zh">加入漫画分类、页数/进度、KFX 位置映射和可选 OCR。OCR 运行时和模型需另行准备。</p>
+          <p class="lang-en">Adds manga classification, page/progress reporting, KFX position mapping and optional OCR. OCR runtimes and models are separate.</p>
+          <div class="asset-meta">
+            <span>KindleReader-OCR-v1.13.0.exe</span>
+            <span data-release-size="ocr">—</span>
+          </div>
+          <div class="hash-row">
+            <span>SHA-256</span>
+            <code data-release-sha="ocr">Loading checksum…</code>
+            <button type="button" class="copy-button" data-copy-sha="ocr" title="Copy SHA-256">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="14" height="14" x="8" y="8" rx="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <span class="sr-only">Copy SHA-256</span>
+            </button>
+          </div>
+          <a class="button button-download" data-download="ocr" href="https://github.com/josefawilson76-design/kindle-reading-stats/releases/download/v1.13.0/KindleReader-OCR-v1.13.0.exe">
+            <span class="lang-zh">下载漫画版</span><span class="lang-en">Download manga edition</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="checksum-note">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <p class="lang-zh">下载后请用 <a href="https://github.com/josefawilson76-design/kindle-reading-stats/releases/download/v1.13.0/SHA256SUMS.txt"><code>SHA256SUMS.txt</code></a> 校验。exe 未做商业代码签名，SmartScreen 可能提示未知发布者。</p>
+        <p class="lang-en">Verify downloads with <a href="https://github.com/josefawilson76-design/kindle-reading-stats/releases/download/v1.13.0/SHA256SUMS.txt"><code>SHA256SUMS.txt</code></a>. The executables are not commercially code-signed, so SmartScreen may warn about an unknown publisher.</p>
+      </div>
+    </section>
+
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="section-heading compact">
+        <p class="kicker">CORE WORKFLOW</p>
+        <h2 id="features-title"><span class="lang-zh">从设备数据到本地看板</span><span class="lang-en">From device data to a local dashboard</span></h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <span class="feature-number">01</span>
+          <h3><span class="lang-zh">只读扫描</span><span class="lang-en">Read-only scan</span></h3>
+          <p class="lang-zh">读取 KRDS sidecar、电子书和本地 fmcache，不修改 Kindle。</p>
+          <p class="lang-en">Reads KRDS sidecars, ebooks and local fmcache without changing the Kindle.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3><span class="lang-zh">清晰口径</span><span class="lang-en">Explicit semantics</span></h3>
+          <p class="lang-zh">区分设备记录、正文精确词数和 OCR 估算值。</p>
+          <p class="lang-en">Separates device records, exact text counts and OCR estimates.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3><span class="lang-zh">离线看板</span><span class="lang-en">Offline dashboard</span></h3>
+          <p class="lang-zh">生成可直接打开的 HTML，并输出 CSV 和真实 XLSX。</p>
+          <p class="lang-en">Creates an openable HTML dashboard plus CSV and real XLSX output.</p>
+        </article>
+        <article>
+          <span class="feature-number">04</span>
+          <h3><span class="lang-zh">漫画边界</span><span class="lang-en">Honest manga scope</span></h3>
+          <p class="lang-zh">漫画页数与进度独立呈现；无时长时保持未知。</p>
+          <p class="lang-en">Manga pages and progress are separate; missing duration stays unknown.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section install" id="install" aria-labelledby="install-title">
+      <div class="section-heading compact">
+        <p class="kicker">QUICK START</p>
+        <h2 id="install-title"><span class="lang-zh">四步开始</span><span class="lang-en">Start in four steps</span></h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-index">1</span>
+          <div>
+            <h3><span class="lang-zh">连接并解锁</span><span class="lang-en">Connect and unlock</span></h3>
+            <p class="lang-zh">用支持数据传输的 USB 线连接 Kindle，并在资源管理器中确认盘符。</p>
+            <p class="lang-en">Connect with a data-capable USB cable and confirm the drive letter in File Explorer.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-index">2</span>
+          <div>
+            <h3><span class="lang-zh">下载并校验</span><span class="lang-en">Download and verify</span></h3>
+            <p class="lang-zh">选择版本，核对页面上的 SHA-256 与 Release 中的校验文件。</p>
+            <p class="lang-en">Pick an edition and compare its SHA-256 with the Release checksum file.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-index">3</span>
+          <div>
+            <h3><span class="lang-zh">运行程序</span><span class="lang-en">Run the executable</span></h3>
+            <p class="lang-zh">把 exe 放到本地目录后运行。纯文字版不需要额外依赖。</p>
+            <p class="lang-en">Run the executable from a local folder. The text-only edition has no extra runtime requirement.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-index">4</span>
+          <div>
+            <h3><span class="lang-zh">打开报告</span><span class="lang-en">Open the report</span></h3>
+            <p class="lang-zh">在输出目录查看 HTML、CSV 与 XLSX；分享前请先脱敏。</p>
+            <p class="lang-en">Open the HTML, CSV and XLSX outputs; sanitize them before sharing.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="requirements">
+        <div>
+          <span class="meta-label"><span class="lang-zh">平台</span><span class="lang-en">Platform</span></span>
+          <strong>Windows 10 / 11 x64</strong>
+        </div>
+        <div>
+          <span class="meta-label"><span class="lang-zh">纯文字版依赖</span><span class="lang-en">Text-only dependencies</span></span>
+          <strong><span class="lang-zh">无额外运行时</span><span class="lang-en">No extra runtime</span></strong>
+        </div>
+        <div>
+          <span class="meta-label"><span class="lang-zh">漫画版可选依赖</span><span class="lang-en">Optional manga dependencies</span></span>
+          <strong>Calibre · Poppler · PaddleOCR · manga-ocr</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust" id="privacy" aria-labelledby="privacy-title">
+      <div class="trust-panel">
+        <div>
+          <p class="kicker">LOCAL BY DEFAULT</p>
+          <h2 id="privacy-title"><span class="lang-zh">隐私与只读原则</span><span class="lang-en">Privacy and read-only behavior</span></h2>
+          <p class="lang-zh">无需 Amazon 登录，不读取云端账号，不要求令牌或 Cookie。报告和历史只写入你指定的本机目录。</p>
+          <p class="lang-en">No Amazon login, cloud-account access, token or cookie is required. Reports and history stay in your chosen local folder.</p>
+        </div>
+        <ul class="trust-list">
+          <li><span class="lang-zh">不写入、删除、移动或修改 Kindle 文件</span><span class="lang-en">Never writes to, deletes, moves or modifies Kindle files</span></li>
+          <li><span class="lang-zh">不自动下载依赖或 OCR 模型</span><span class="lang-en">Never auto-downloads dependencies or OCR models</span></li>
+          <li><span class="lang-zh">不把 OCR 估算值冒充精确统计</span><span class="lang-en">Never presents OCR estimates as exact statistics</span></li>
+          <li><span class="lang-zh">发布页与测试夹具只使用合成数据</span><span class="lang-en">The project page and fixtures use synthetic data only</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section limits" aria-labelledby="limits-title">
+      <div class="section-heading compact">
+        <p class="kicker">KNOWN LIMITS</p>
+        <h2 id="limits-title"><span class="lang-zh">已知限制</span><span class="lang-en">Known limitations</span></h2>
+      </div>
+      <div class="limit-columns">
+        <p class="lang-zh">主要验证范围为 Kindle Paperwhite 4、固件 5.16.3.1 与 KRDS v1 sidecar。其他型号和固件不作保证。</p>
+        <p class="lang-en">The primary verified target is Kindle Paperwhite 4, firmware 5.16.3.1 and KRDS v1 sidecars. Other models and firmware are not guaranteed.</p>
+        <p class="lang-zh">漫画 OCR 依赖外部工具与离线模型。源文件页数可能与 Kindle 内部分页不同，估算结果也可能受渲染和语言判断影响。</p>
+        <p class="lang-en">Manga OCR depends on external tools and offline models. Source-file pagination may differ from Kindle pagination, and estimates can vary with rendering and language detection.</p>
+        <p class="lang-zh">不支持 Amazon 云端统计，不绕过 DRM，也不提供 macOS 或 Linux 安装包。</p>
+        <p class="lang-en">Amazon cloud statistics, DRM bypass, macOS and Linux packages are outside scope.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>Kindle Reading Dashboard</strong>
+      <span>v1.13.0 · GPL v3</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/josefawilson76-design/kindle-reading-stats">GitHub</a>
+      <a href="https://github.com/josefawilson76-design/kindle-reading-stats/releases"><span class="lang-zh">发布记录</span><span class="lang-en">Releases</span></a>
+      <a href="https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.md"><span class="lang-zh">中文文档</span><span class="lang-en">Chinese docs</span></a>
+      <a href="https://github.com/josefawilson76-design/kindle-reading-stats/blob/main/README.en.md"><span class="lang-zh">英文文档</span><span class="lang-en">English docs</span></a>
+    </nav>
+    <p class="legal lang-zh">Kindle、Amazon、Calibre 等名称归各自权利人所有；本项目与这些权利人没有隶属或背书关系。</p>
+    <p class="legal lang-en">Kindle, Amazon, Calibre and other names belong to their respective owners. This project is not affiliated with or endorsed by them.</p>
+  </footer>
+
+  <div class="copy-status" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

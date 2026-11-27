@@ -1,0 +1,53 @@
+# Local Kindle data and generated output
+reading_history.json
+achievement_profile.json
+settings.json
+book_modes.json
+word_counts_cache.json
+metadata.calibre
+kindle_reading_dashboard.xlsx
+_covers/
+_ocr/
+_wordcount/
+_ocr_models/
+
+# Releases are attached to GitHub Releases, not committed
+dist/
+dist/*.exe
+dist/*.zip
+
+# Build and local tooling caches
+build/
+.tmp-pip/
+.ocr-pip/
+.pip-cache/
+.calibre-test/
+.metadata-test/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backups, logs and editor state
+.codex-backup-*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+
+# Keep reproducible examples and documentation
+!settings.example.json
+!book_modes.example.json

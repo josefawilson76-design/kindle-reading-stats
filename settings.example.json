@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "kindle_path": "E:\\",
+  "output_dir": "dist",
+  "language": "auto",
+  "exact_word_count": false,
+  "open_html": true,
+  "history_limit": 0,
+  "book_modes_file": "book_modes.json",
+  "achievement_profile_file": "achievement_profile.json",
+  "completed_book_threshold_percent": 95.0,
+  "manga_ocr": false,
+  "manga_classify": true,
+  "manga_volume_achievement": false,
+  "ocr_language": "auto",
+  "ocr_engine": "auto",
+  "ocr_dpi": 240,
+  "ocr_mode": "classify",
+  "ocr_workers": 0,
+  "ocr_sample_pages": 6,
+  "ocr_min_confidence": 0.7,
+  "ocr_cache_dir": "_ocr"
+}
